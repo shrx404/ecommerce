@@ -7,6 +7,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { NavbarSidebar } from "./navbar-sidebar";
+import { Menu } from "lucide-react";
 
 const poppins = Poppins({
   weight: ["700"],
@@ -43,7 +44,7 @@ const navItems = [
 ];
 
 export const Navbar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -71,15 +72,25 @@ export const Navbar = () => {
       <div className="lg:flex hidden items-center gap-4 pr-6">
         <Button
           variant="outline"
-          className="rounded-sm text-lg px-12 hover:bg-black hover:text-white bg-white text-black"
+          className="rounded-sm text-lg px-12 hover:bg-black hover:text-white bg-white text-black transition-colors"
         >
           <Link href="/sign-in">login</Link>
         </Button>
         <Button
           variant="outline"
-          className="rounded-full text-lg px-12 bg-black text-white hover:bg-white hover:text-black"
+          className="rounded-full text-lg px-12 bg-black text-white hover:bg-white hover:text-black transition-colors"
         >
           <Link href="/sign-up">start selling</Link>
+        </Button>
+      </div>
+
+      <div className="lg:hidden flex items-center gap-4 pr-6">
+        <Button
+          variant="ghost"
+          className="size-12 border-none bg-white rounded-full p-2"
+          onClick={() => setIsSidebarOpen(true)}
+        >
+          <Menu />
         </Button>
       </div>
     </nav>
