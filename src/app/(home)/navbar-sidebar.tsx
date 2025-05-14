@@ -10,7 +10,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 interface NavbarItem {
   children: React.ReactNode;
   href: string;
-  isActive?: boolean;
 }
 
 interface Props {
