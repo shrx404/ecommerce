@@ -72,13 +72,13 @@ export const Navbar = () => {
       <div className="lg:flex hidden items-center gap-4 pr-6">
         <Button
           variant="outline"
-          className="rounded-sm text-lg px-12 hover:bg-black hover:text-white bg-white text-black transition-colors"
+          className="rounded-sm text-lg px-12 hover:bg-black hover:text-white bg-white text-black transition-colors duration-500"
         >
           <Link href="/sign-in">login</Link>
         </Button>
         <Button
           variant="outline"
-          className="rounded-full text-lg px-12 bg-black text-white hover:bg-white hover:text-black transition-colors"
+          className="rounded-full text-lg px-12 bg-black text-white hover:bg-white hover:text-black transition-colors duration-500"
         >
           <Link href="/sign-up">start selling</Link>
         </Button>
